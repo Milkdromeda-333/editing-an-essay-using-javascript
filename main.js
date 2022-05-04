@@ -10,7 +10,7 @@ storyWords.forEach(word =>{
   count++
 })
   //console.log(count) 
-// this piece of code counts how many words are in the array and logs it
+// this piece of code counts how many elements are in the array and logs it
 
 storyWords = storyWords.filter(word =>{
 if(word !== unnecessaryWord){return word}
@@ -18,11 +18,11 @@ if(word !== unnecessaryWord){return word}
 // this piece of code filters out words that equal the value of the variable unnecessaryWord, which is the word literally.
 
 storyWords = storyWords.map(word => word !== misspelledWord ? word : 'beautiful' );
-// this line makes a new array after checking to see that each word doesnt equal the value of misspelledWord. If it does equal that it replaces it with the word 'beautiful'
+// this line makes a new array after checking to see that each element doesnt equal the value of misspelledWord. If it does equal that it replaces it with the word 'beautiful'
 
 let badWordIndex = storyWords.findIndex(word => word === badWord);
 storyWords[78] = 'really';
-// this piece of code locates the index of a word that equals the value of badWord, which is the word freaking, and then reassigns the index with the word really.
+// this piece of code locates the index of an element that equals the value of badWord, which is the word freaking, and then reassigns the element at the index with the word really.
 
 const lengthCheck = storyWords.every(word => word.length < 10);
   //console.log(lengthCheck) returns false
